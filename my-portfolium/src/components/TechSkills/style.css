@@ -1,0 +1,466 @@
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .boxList{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border-bottom: solid 1px #35baf8; */
+    gap: 20px;
+  }
+
+  .mySwp{
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    padding: 2.5em;
+    margin-bottom: 15px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+
+  .swiperslide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .techTitle{
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+    width: 195px;
+    height: 50px;
+    margin-top: 140px;
+    animation: fadeIn 2s;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: solid 2px #35baf8;
+    animation: fadeIn 2s;
+  }
+
+  .nameTech{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    z-index: 1;
+  }
+
+/* HTML ICON */
+.html{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .htmlIcon{
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+  
+  .htmlIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #f06529;
+    border-radius: 10px;
+    border: solid 3px #f06529;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #f06529 0px 5px 15px;
+}
+.htmlIcon:hover::before {
+    transform: scale(1);
+}
+
+/* CSS ICON */
+.css{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .cssIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .cssIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #264de4;
+    border-radius: 10px;
+    border: solid 3px #264de4;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #264de4 0px 5px 15px;
+    /* #f0db4f */
+}
+.cssIcon:hover::before {
+    transform: scale(1);
+}
+
+  /* JAVASCRIPT ICON */
+.js{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .jsIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .jsIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #f0db4f ;
+    border-radius: 10px;
+    border: solid 3px #f0db4f ;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #f0db4f  0px 5px 15px;
+     
+}
+.jsIcon:hover::before {
+    transform: scale(1);
+}
+
+  /* GIT ICON */
+.git{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .gitIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .gitIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #f34f29;
+    border-radius: 10px;
+    border: solid 3px #f34f29 ;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #f34f29 0px 5px 15px;
+     
+}
+.gitIcon:hover::before {
+    transform: scale(1);
+}
+
+
+  /* REACT ICON */
+.react{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .reactIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .reactIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #61DBFB;
+    border-radius: 10px;
+    border: solid 3px #61DBFB ;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #61DBFB 0px 5px 15px;
+     
+}
+.reactIcon:hover::before {
+    transform: scale(1);
+}
+
+/* STYLED ICON */
+.sty{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .styIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .styIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #f635b0;
+    border-radius: 10px;
+    border: solid 3px #f635b0 ;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #f635b0 0px 5px 15px;
+     
+}
+.styIcon:hover::before {
+    transform: scale(1);
+}
+
+/* TYPESCRIPT ICON */
+.type{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .typeIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .typeIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #007acc;
+    border-radius: 10px;
+    border: solid 3px #007acc ;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #007acc 0px 5px 15px;
+     
+}
+.typeIcon:hover::before {
+    transform: scale(1);
+}
+
+
+/* NODE ICON */
+.node{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .nodeIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .nodeIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #3c873a;
+    border-radius: 10px;
+    border: solid 3px #3c873a;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #3c873a 0px 5px 15px;
+     
+}
+.nodeIcon:hover::before {
+    transform: scale(1);
+}
+
+/* EXPRESS ICON */
+.ex{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .exIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .exIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #13870f;
+    border-radius: 10px;
+    border: solid 3px #13870f;
+    transform: scale(0);
+	transition: 0.3s ease-in-out;
+    box-shadow: #13870f 0px 5px 15px;
+     
+}
+.exIcon:hover::before {
+    transform: scale(1);
+}
+
+/* SQL ICON */
+
+.sql{
+    color: #ffffff;
+    z-index: 1;
+}
+
+  .sqlIcon{
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: #35baf8 0px 5px 15px;
+  }
+
+  .sqlIcon::before {
+    content: "";
+    width: 200px;
+    height: 250px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #0d1a5c;
+    border-radius: 10px;
+    border: solid 3px #0d1a5c;
+    transform: scale(0);
+	  transition: 0.3s ease-in-out;
+    box-shadow: #0d1a5c 0px 5px 15px;
+     
+}
+.sqlIcon:hover::before {
+    transform: scale(1);
+}
+
+  /* MEDIA - BREAK POINT */
+
+  /* @media(min-width:375px){
+    .mySwp{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+
+  @media(min-width:425px){
+    .mySwp{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+
+ 
+
+  @media(min-width:768px){
+    .mySwp{
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+
+  @media(min-width:1024px){
+    .mySwp{
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+    }
+  } */
