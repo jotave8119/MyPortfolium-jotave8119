@@ -39,6 +39,8 @@
     gap: 25px;
   }
 
+  
+
   .linkedinLink{
     display: flex;
     justify-content: center;
@@ -49,7 +51,7 @@
     flex-direction: column;
     word-spacing: -2px;
     text-align: justify;
-    gap: 25px;
+    gap: 35px;
     padding: 1em;
     width: 200px;
     height: 200px;
@@ -67,6 +69,50 @@
     box-shadow: #0e76a8 0px 5px 15px;
   }
 
+  .linkedinLink .click{
+    position: absolute;
+    margin-left: 83px;
+    margin-top: 10px;
+    background-color: rgba(255, 254, 254, 0.166);
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 1;
+    animation: flash 2s linear infinite;
+    display: none;
+    color: #ffffff;
+  }
+
+  .githubLink .click{
+    position: absolute;
+    margin-left: 83px;
+    margin-top: 1px;
+    background-color: rgba(255, 254, 254, 0.166);
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 1;
+    animation: flash 2s linear infinite;
+    display: none;
+    color: #ffffff;
+  }
+
+  .gmailLink .click{
+    position: absolute;
+    margin-left: 83px;
+    margin-top: 0px;
+    background-color: rgba(255, 254, 254, 0.166);
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 1;
+    animation: flash 2s linear infinite;
+    display: none;
+    color: #ffffff;
+  }
+
+
+  .socialBox a:hover .click{
+    display: block;
+  }
+
   .githubLink{
     display: flex;
     justify-content: center;
@@ -77,7 +123,7 @@
     flex-direction: column;
     text-align: justify;
     word-spacing: -2px;
-    gap: 25px;
+    gap: 35px;
     padding: 1em;
     width: 200px;
     height: 200px;
@@ -103,7 +149,7 @@
     flex-direction: column;
     text-align: justify;
     word-spacing: -2px;
-    gap: 25px;
+    gap: 35px;
     padding: 1em;
     width: 200px;
     height: 200px;
