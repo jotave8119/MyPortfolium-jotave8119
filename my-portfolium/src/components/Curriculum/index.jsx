@@ -19,7 +19,7 @@ const Curriculum = () => {
     },[])
 
     return(
-        <section className="cvBox" id="cv">
+        <section className="cvBox" id="cv" data-aos="fade-in" data-aos-duration="1500">
             <h2 className="cvTitle">Currículo</h2>
             <div className="animation" ref={container}></div>
             <p className="cvText">Não custa nada dar aquela espiadinha no currículo.

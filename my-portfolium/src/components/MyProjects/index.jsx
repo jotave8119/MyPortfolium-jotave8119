@@ -21,14 +21,15 @@ const MyProjects = () => {
         slidesPerView={1}
         spaceBetween={10}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         navigation={true}
         modules={[Pagination, Navigation]}
         style={{
           "--swiper-navigation-color": "#35baf8",
           "--swiper-pagination-color": "#35baf8",
+          "--swiper-pagination-bullet-inactive-color":"#eee6e6"
         }}
         breakpoints={{
           640: {
@@ -45,6 +46,7 @@ const MyProjects = () => {
           },
         }}
         className="mySwiper"
+        data-aos="fade-in" data-aos-duration="1500"
       >
         <SwiperSlide className="mySld">
           <a

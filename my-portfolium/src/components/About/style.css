@@ -20,6 +20,7 @@
     padding: 1.5em;
     border-top: solid 1px #35baf8;
     border-bottom: solid 1px #35baf8;
+    overflow: hidden;
   }
 
   .aboutTitle{
@@ -35,7 +36,6 @@
   color: #ffffff;
   text-align: justify;
   font-weight: 600;
-  animation: fadeInLeft 2s;
 }
 
 @media(min-width:375px){

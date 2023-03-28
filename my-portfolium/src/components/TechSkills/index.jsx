@@ -17,7 +17,7 @@ import "swiper/css/navigation";
 
 const TechSkills = () => {
   return (
-    <div className="boxList">
+    <div className="boxList" >
       <h2 className="techTitle" id="techs">
         Tecnologias
       </h2>
@@ -25,9 +25,9 @@ const TechSkills = () => {
         slidesPerView={1}
         spaceBetween={10}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         breakpoints={{
             640: {
               slidesPerView: 2,
@@ -47,9 +47,11 @@ const TechSkills = () => {
         style={{
           "--swiper-navigation-color": "#35baf8",
           "--swiper-pagination-color": "#35baf8",
+          "--swiper-pagination-bullet-inactive-color":"#8a8787"
         }}
         
         className="mySwp"
+        data-aos="fade-in" data-aos-duration="1500"
       >
         <SwiperSlide className="swiperslide">
           <div className="htmlIcon" title="HTML">

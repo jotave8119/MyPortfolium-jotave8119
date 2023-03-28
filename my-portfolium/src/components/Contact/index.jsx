@@ -6,7 +6,7 @@ import {GiClick} from "react-icons/gi";
 
 const Contact = () => {
   return (
-    <section className="contactBox" id="contact">
+    <section className="contactBox" id="contact" data-aos="fade-in" data-aos-duration="1500">
       <h2 className="contactTitle">Contato</h2>
       <div className="socialBox">
         <a
