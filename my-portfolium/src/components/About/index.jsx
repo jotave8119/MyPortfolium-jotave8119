@@ -1,11 +1,19 @@
 import "./style.css";
+import {i18n} from "../../translate/i18n";
 
 const About = () => {
   return (
-    <section className="aboutBox" id="about"  >
-      <h2 className="aboutTitle" title="Um pouco sobre mim!" >Sobre</h2>
-      <p className="aboutText" title="Leia com Carinho 🥰" data-aos="fade-right" data-aos-duration="2000">
-        Meu nome é João Vitor Teixeira da Silva, tenho 26 anos, sou do Rio de
+    <section className="aboutBox" id="about">
+      <h2 className="aboutTitle" title="Um pouco sobre mim!">
+        {i18n.t("titles.About")}
+      </h2>
+      <p
+        className="aboutText"
+        title="Leia com Carinho 🥰"
+        data-aos="fade-right"
+        data-aos-duration="2000"
+      >
+        {/* Meu nome é João Vitor Teixeira da Silva, tenho 26 anos, sou do Rio de
         Janeiro(Brasil) e sou desenvolvedor Front end. Estudo desenvolvimento
         web há um pouco mais de 9 meses e tenho certificado de desenvolvimento
         Front end pela Kenzie Academy Brasil. Por lá fiz parte de vários
@@ -18,7 +26,8 @@ const About = () => {
         cada vez mais. Estou em busca da minha primeira oportunidade no mercado
         de trabalho como desenvolvedor júnior ou estagiário. Meu objetivo é me
         firmar cada vez mais na área com muito esforço e dedicação. Sou uma garoto
-        de programa(sempre quis fazer essa piada) 👨🏻‍💻. Me contrate. Não vai se arrepender.
+        de programa(sempre quis fazer essa piada) 👨🏻‍💻. Me contrate. Não vai se arrepender. */}
+        {i18n.t("messages.About")}
       </p>
     </section>
   );

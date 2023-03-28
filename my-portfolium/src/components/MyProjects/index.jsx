@@ -10,12 +10,13 @@ import screenkenziehub from "../../assets/screenkenziehub.png";
 import screenburguer from "../../assets/screenburguer.png";
 import screennukenzie from "../../assets/screennukenzie.png";
 import screenweather from "../../assets/screenweather.png";
+import { i18n } from "../../translate/i18n";
 
 const MyProjects = () => {
   return (
     <div className="proBox">
       <h2 className="proTitle" id="projects">
-        Projetos
+        {i18n.t("titles.MyProjects")}
       </h2>
       <Swiper
         slidesPerView={1}
@@ -62,7 +63,7 @@ const MyProjects = () => {
               loading="lazy"
               title="Ver devducks"
             />
-            <span className="show">Clique para ver</span>
+            <span className="show">{i18n.t("messages.MyProjects")}</span>
           </a>
         </SwiperSlide>
         <SwiperSlide className="mySld">
@@ -79,7 +80,7 @@ const MyProjects = () => {
               loading="lazy"
               title="Ver devhelp"
             />
-            <span className="show">Clique para ver</span>
+            <span className="show">{i18n.t("messages.MyProjects")}</span>
           </a>
         </SwiperSlide>
         <SwiperSlide className="mySld">
@@ -96,7 +97,7 @@ const MyProjects = () => {
               loading="lazy"
               title="Ver KenizeHub"
             />
-            <span className="show">Clique para ver</span>
+            <span className="show">{i18n.t("messages.MyProjects")}</span>
           </a>
         </SwiperSlide>
         <SwiperSlide className="mySld">
@@ -113,7 +114,7 @@ const MyProjects = () => {
               loading="lazy"
               title="Ver KenzieBurguer"
             />
-            <span className="show">Clique para ver</span>
+            <span className="show">{i18n.t("messages.MyProjects")}</span>
           </a>
         </SwiperSlide>
         <SwiperSlide className="mySld">
@@ -130,7 +131,7 @@ const MyProjects = () => {
               loading="lazy"
               title=" Ver NuKenzie"
             />
-            <span className="show">Clique para ver</span>
+            <span className="show">{i18n.t("messages.MyProjects")}</span>
           </a>
         </SwiperSlide>
         <SwiperSlide className="mySld">
@@ -147,7 +148,7 @@ const MyProjects = () => {
               loading="lazy"
               title=" Ver WeatherApp"
             />
-            <span className="show">Clique para ver</span>
+            <span className="show">{i18n.t("messages.MyProjects")}</span>
           </a>
         </SwiperSlide>
       </Swiper>

@@ -2,19 +2,29 @@ import "./style.css";
 import { useState } from "react";
 import profile from "../../assets/profile.png";
 import { Link } from "react-scroll";
+import { i18n }from "../../translate/i18n";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const I18N_STORAGE_KEY = "i18nextLng";
+  const [language] = useState(localStorage.getItem(I18N_STORAGE_KEY));
+
+  const handleSelect = (event) => {
+    window.localStorage.setItem(I18N_STORAGE_KEY, event.target.value);
+    window.location = window.location;
+  };
 
   return (
     <div className="Navbar">
-     <div className="photoBox">
-
-      <img className="photo" title="João" src={profile} alt="João" />
-      <h2 className="name">João</h2>
-     </div>
-      {/* <span className="nav-logo">DevLHB</span> */}
+      <div className="photoBox">
+        <img className="photo" title="João" src={profile} alt="João" />
+        <h2 className="name">João</h2>
+      </div>
       <div className={`nav-items ${isOpen && "open"}`}>
+        <select className="select" onChange={handleSelect} value={language}>
+          <option value="pt-BR">Pt-BR</option>
+          <option value="en-US">En-US</option>
+        </select>
         <Link
           to="about"
           spy={true}
@@ -25,7 +35,7 @@ const NavBar = () => {
           className="link"
           onClick={() => setIsOpen(!isOpen)}
         >
-          Sobre
+          {i18n.t("titles.NavBar")}
         </Link>
         <Link
           to="projects"
@@ -37,7 +47,7 @@ const NavBar = () => {
           className="link"
           onClick={() => setIsOpen(!isOpen)}
         >
-          Projetos
+          {i18n.t("titles.NavBar1")}
         </Link>
         <Link
           to="techs"
@@ -49,7 +59,7 @@ const NavBar = () => {
           className="link"
           onClick={() => setIsOpen(!isOpen)}
         >
-          Tecnologias
+         {i18n.t("titles.NavBar2")}
         </Link>
         <Link
           to="contact"
@@ -61,7 +71,7 @@ const NavBar = () => {
           className="link"
           onClick={() => setIsOpen(!isOpen)}
         >
-          Contato
+          {i18n.t("titles.NavBar3")}
         </Link>
         <Link
           to="cv"
@@ -73,10 +83,9 @@ const NavBar = () => {
           className="link"
           onClick={() => setIsOpen(!isOpen)}
         >
-          Currículo
+          {i18n.t("titles.NavBar4")}
         </Link>
       </div>
-
       <div
         className={`nav-toggle ${isOpen && "open"}`}
         onClick={() => setIsOpen(!isOpen)}
@@ -84,22 +93,6 @@ const NavBar = () => {
         <div className="bar"></div>
       </div>
     </div>
-    // <header>
-    //   <div className="photoBox">
-    //
-    //     <h2 className="name">João</h2>
-    //   </div>
-    //   <nav className={`nav-items ${isOpen && "open"}`} ref={navRef}>
-
-    // //     <button className="openBtn closeBtn" onClick={showNavbar}>
-    // //       <FaTimes size={20} />
-    // //     </button>
-    // //   </nav>
-
-    // //   <button className="openBtn" onClick={showNavbar}>
-    // //     <FaBars size={20} />
-    // //   </button>
-    // // </header>
   );
 };
 

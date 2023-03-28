@@ -47,6 +47,29 @@
     background-color: #000000;
     box-shadow: #35baf8 0px 2px 5px;
 }
+
+  .select{
+    width: 75px;
+    height: 25px;
+    background-color: #151414;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    border: solid 1px #ffffff;
+  }
+ option{
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  cursor: pointer;
+}
   
  .nav-items .link  {
     color: #ffffff;
@@ -88,7 +111,7 @@
       z-index: 9999;
       flex-direction: column;
       align-items: flex-end;
-      background: #000000f8;
+      background: #000000f5;
       backdrop-filter: blur(15px);
       left: 0;
       width: 100%;
@@ -96,11 +119,18 @@
       transform: translateX(100%);
       transition: all .45s;
       margin-top: 10px;
-      padding: 0.5em;
+      padding: 1.5em;
     }
   
-    .Navbar > .nav-items > a::before {
-        background: transparent;
+    .Navbar > .nav-items > a::before {    
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #35baf8;
+    transition: all 0.45s;
     }
   
     .Navbar > .nav-items.open {

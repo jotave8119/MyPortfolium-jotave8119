@@ -14,12 +14,13 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { i18n } from "../../translate/i18n";
 
 const TechSkills = () => {
   return (
     <div className="boxList" >
       <h2 className="techTitle" id="techs">
-        Tecnologias
+        {i18n.t("titles.TechSkills")}
       </h2>
       <Swiper
         slidesPerView={1}

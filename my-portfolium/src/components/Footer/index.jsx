@@ -4,6 +4,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-scroll";
+import { i18n } from "../../translate/i18n";
 
 const Footer = () => {
   return (
@@ -46,7 +47,7 @@ const Footer = () => {
         duration={1000}
         title="Voltar para o Topo"
       >
-        Voltar ao Início
+        {i18n.t("titles.Footer")}
       </Link>
       <span className="copy">
         João Teixeira 2023 <AiFillCopyrightCircle size={15} />

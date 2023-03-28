@@ -1,6 +1,7 @@
 import TypeWriterEffect from "react-typewriter-effect";
 import jvphoto from "../../assets/jvphoto.png";
 import "./style.css";
+import { i18n } from "../../translate/i18n";
 
 const MyBanner = () => {
   return (
@@ -14,11 +15,17 @@ const MyBanner = () => {
           }}
           startDelay={1000}
           cursorColor="#ffffff"
+          // multiText={[
+          //   "Olá!",
+          //   "Sou João Teixeira!",
+          //   "Dev Front End!",
+          //   "Bem-vindo(a)!",
+          // ]}
           multiText={[
-            "Olá!",
-            "Sou João Teixeira!",
-            "Dev Front End!",
-            "Bem-vindo(a)!",
+            i18n.t("titles.MyBanner"),
+            i18n.t("titles.MyBanner1"),
+            i18n.t("titles.MyBanner2"),
+            i18n.t("titles.MyBanner3"),
           ]}
           multiTextDelay={1000}
           typeSpeed={40}

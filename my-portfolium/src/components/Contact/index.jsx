@@ -3,11 +3,12 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import {GiClick} from "react-icons/gi";
+import { i18n } from "../../translate/i18n";
 
 const Contact = () => {
   return (
     <section className="contactBox" id="contact" data-aos="fade-in" data-aos-duration="1500">
-      <h2 className="contactTitle">Contato</h2>
+      <h2 className="contactTitle">{i18n.t("titles.Contact")}</h2>
       <div className="socialBox">
         <a
           className="linkedinLink"
@@ -16,8 +17,8 @@ const Contact = () => {
           target="_blank"
         >
           <span className="click"><GiClick size={30} /></span>
-          <FaLinkedinIn size={60} className="linkedin" /> Este é o meu Linkedln.
-          Vamos nos conectar.
+          <FaLinkedinIn size={60} className="linkedin" /> 
+          {i18n.t("messages.Contact")}
         </a>
         <a
           className="githubLink"
@@ -26,8 +27,8 @@ const Contact = () => {
           target="_blank"
         >
           <span className="click"><GiClick size={30} /></span>
-          <BsGithub size={70} className="github" /> Agora Você
-          pode ver alguns dos meus projetos e me seguir. 
+          <BsGithub size={70} className="github" /> 
+          {i18n.t("messages.Contact1")}
         </a>
         <a
           className="gmailLink"
@@ -36,8 +37,8 @@ const Contact = () => {
           target="_blank"
         >
           <span className="click"><GiClick size={30} /></span>
-          <SiGmail size={60} className="gmail" /> Você também pode fazer contato
-          através do meu E-mail. Fique a Vontade!
+          <SiGmail size={60} className="gmail" /> 
+          {i18n.t("messages.Contact2")}
         </a>
       </div>
     </section>

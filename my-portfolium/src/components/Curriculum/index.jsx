@@ -2,6 +2,7 @@ import { useEffect, useRef, } from "react";
 import "./style.css";
 import Lottie from "lottie-web"
 import BtnDownload from "../BtnDownload";
+import { i18n } from "../../translate/i18n";
 
 const Curriculum = () => {
 
@@ -20,10 +21,10 @@ const Curriculum = () => {
 
     return(
         <section className="cvBox" id="cv" data-aos="fade-in" data-aos-duration="1500">
-            <h2 className="cvTitle">Currículo</h2>
+            <h2 className="cvTitle">{i18n.t("titles.Curriculum")}</h2>
             <div className="animation" ref={container}></div>
-            <p className="cvText">Não custa nada dar aquela espiadinha no currículo.
-            Faça o download!
+            <p className="cvText">
+                {i18n.t("messages.Curriculum")}
             </p>
             <BtnDownload/>
         </section>
