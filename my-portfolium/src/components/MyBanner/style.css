@@ -79,6 +79,7 @@
     flex-direction: row;
     justify-content: space-around;
     gap: 100px;
+    height: 650px;
   }
   .apresentation{
     font-size: 2rem;

@@ -52,7 +52,7 @@
 
 
   .show{
-    width: 91%;
+    width: 95%;
     height: 80px;
     background-color: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(3px);
@@ -60,8 +60,8 @@
     font-size: 1rem;
     font-weight: 700;
     position: absolute;
-    right: 10px;
-    top: 160px;
+    right: 7px;
+    top: 163px;
     border-radius: 10px;
     padding: 1.5em;
     text-align: center;
@@ -85,52 +85,26 @@
   }
 
 
-/* .mySwiper a:hover .desc{
-    display: block;
-    font-size: 1rem;
-    padding: 10px 0;
-    background: #000000d7;
-    color: #ffffff;
-    position: absolute;
-    bottom: 350px;
-    left: 100px;
-    padding: 10px;
-    margin: 0;
-    width: 300px;
+@media(min-width:375px){
+  .show{
+    right: 8px;
+  }
 }
-.mySwiper a:hover .desc strong {
-    display: block;
-    margin-bottom: 5px;
-    font-size:1.5em;
-} */
 
-
-  /* @media(min-width:768px){
-   .mySwiper{
-    height: 500px;
-   }
+@media(min-width:425px){
+  .show{
+    right: 9px;
   }
+}
 
-  .mySwiper img{
-    padding: 4em;
-
+@media(min-width:768px){
+  .show{
+    right: 5px;
   }
+}
 
-  @media(min-width:1024px){
-    .mySwiper{
-     height: 800px;
-    }
-    .mySwiper img{
-      padding: 4em;
-    }
-    .mySwiper a{
-      height: 50px;
-      width: 150px;
-      left: 620px;
-      top: 650px;
-     }
-
-    .proTitle{
-      margin-top: 80px;
-    }
-   } */
+@media(min-width:1024px){
+  .show{
+    right: 6px;
+  }
+}

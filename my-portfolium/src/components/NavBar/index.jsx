@@ -69,7 +69,7 @@ const NavBar = () => {
           smooth={true}
           offset={50}
           duration={1000}
-          title="Contato"
+          title="Currículo"
           className="link"
           onClick={() => setIsOpen(!isOpen)}
         >

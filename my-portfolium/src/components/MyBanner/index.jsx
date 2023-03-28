@@ -1,10 +1,10 @@
 import TypeWriterEffect from "react-typewriter-effect";
-import profile from "../../assets/profile.png";
+import jvphoto from "../../assets/jvphoto.png";
 import "./style.css";
 
 const MyBanner = () => {
   return (
-    <section className="bannerBox">
+    <section className="bannerBox" id="banner">
       <h1 className="apresentation">
         <TypeWriterEffect
           textStyle={{
@@ -25,7 +25,7 @@ const MyBanner = () => {
           multiTextLoop
         />
       </h1>
-      <img className="profileImg" loading="lazy" src={profile} alt="João" />
+      <img className="profileImg" loading="lazy" src={jvphoto} alt="João" />
     </section>
   );
 };

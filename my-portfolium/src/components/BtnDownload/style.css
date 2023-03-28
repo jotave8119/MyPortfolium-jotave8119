@@ -40,6 +40,7 @@
     border-radius: .25em;
     line-height: var(--tooltip-height);
     bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    /* bottom: calc(40px + 18px + 10px)  */
     left: calc(50% - var(--tooltip-width) / 2);
   }
   

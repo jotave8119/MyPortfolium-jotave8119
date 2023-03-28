@@ -1,3 +1,16 @@
 html{
     background-color: black;
   }
+
+  ::-webkit-scrollbar{
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: #35baf8;
+    border-radius: 10px;
+  }

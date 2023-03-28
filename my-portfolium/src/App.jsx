@@ -2,6 +2,7 @@ import "./App.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Curriculum from "./components/Curriculum";
+import Footer from "./components/Footer";
 import MyBanner from "./components/MyBanner";
 import MyProjects from "./components/MyProjects";
 import NavBar from "./components/NavBar";
@@ -17,6 +18,7 @@ const App = () => {
       <TechSkills />
       <Contact />
       <Curriculum/>
+      <Footer/>
     </>
   );
 };
