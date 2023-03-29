@@ -35,7 +35,9 @@
   animation: fadeInRight 2s;
   filter: contrast(105%) brightness(110%);
   border-radius: 50%;
-  animation: toUp 2s ease-in-out infinite;
+  box-shadow: #35baf8 1px 2px 5px;
+  /* 
+  animation: toUp 2s ease-in-out infinite; */
 }
 
 @keyframes toUp{

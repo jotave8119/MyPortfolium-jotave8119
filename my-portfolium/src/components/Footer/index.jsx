@@ -5,6 +5,9 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { i18n } from "../../translate/i18n";
+import profileInsta from "../../assets/profileInsta.jpeg";
+import gitProfile from "../../assets/gitProfile.jpeg";
+import profileLinkedin from "../../assets/profileLinkedin.png";
 
 const Footer = () => {
   return (
@@ -17,7 +20,7 @@ const Footer = () => {
           className="insta"
         >
           <AiFillInstagram size={40}/>
-          <span className="showUp">@joaovitor_ts13</span>
+          <span className="showUp">@joaovitor_ts13 <img className="footImgInsta" src={profileInsta} alt="joão"/></span>
         </a>
         <a
           href="https://github.com/jotave8119"
@@ -26,7 +29,7 @@ const Footer = () => {
           className="gthub"
         >
           <BsGithub size={37} />
-          <span className="showUp">jotave8119</span>
+          <span className="showUp">jotave8119 <img className="footImg" src={gitProfile} alt="joão"/></span>
         </a>
         <a
           href="https://www.linkedin.com/in/joaoteixeira13/"
@@ -35,7 +38,7 @@ const Footer = () => {
           className="lin"
         >
           <FaLinkedinIn size={35}/>
-          <span className="showUp">João Teixeira</span>
+          <span className="showUp">João Teixeira <img className="footImg" src={profileLinkedin} alt="joão"/></span>
         </a>
       </div>
       <Link

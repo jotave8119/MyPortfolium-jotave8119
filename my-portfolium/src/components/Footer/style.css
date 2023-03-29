@@ -29,9 +29,24 @@
     gap: 25px;
   }
 
-  .social a .showUp{
-    width: 150px;
+  .footImg{
+    width: 30px;
     height: 30px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: #35baf87e 0px 2px 5px;
+  }
+  .footImgInsta{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: #35baf87e 0px 2px 5px;
+  }
+
+  .social a .showUp{
+    width: 175px;
+    height: 45px;
     font-size: 1rem;
     font-weight: 700;
     background-color: #161515;
@@ -40,14 +55,17 @@
     border-radius: 5px;
     margin-bottom: 120px;
     text-align: center;
-    padding: 0.2em;
+    padding: 0.1em;
     display: none;
     transition: 0.3s ease-in-out;
     animation: fadeInUp 0.3s;
   }
 
   .social a:hover .showUp{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
   }
 
   .insta{
@@ -179,4 +197,6 @@
     font-size: 0.7rem;
  
 }
+
+
   

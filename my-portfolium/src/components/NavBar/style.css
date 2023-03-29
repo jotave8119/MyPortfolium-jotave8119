@@ -1,4 +1,3 @@
-
 *{
     border: 0;
     margin: 0;
@@ -9,9 +8,6 @@
     font-family: 'Inter', sans-serif;
   }
 
-
-
-/* -------------------------------- */
 .Navbar {
     height: 75px;
     top: 0;
@@ -45,6 +41,7 @@
     border-radius: 50%;
     object-fit: contain;
     background-color: #000000;
+    filter:  brightness(120%);
     box-shadow: #35baf8 0px 2px 5px;
 }
 

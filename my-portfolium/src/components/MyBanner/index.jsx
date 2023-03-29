@@ -15,12 +15,6 @@ const MyBanner = () => {
           }}
           startDelay={1000}
           cursorColor="#ffffff"
-          // multiText={[
-          //   "Olá!",
-          //   "Sou João Teixeira!",
-          //   "Dev Front End!",
-          //   "Bem-vindo(a)!",
-          // ]}
           multiText={[
             i18n.t("titles.MyBanner"),
             i18n.t("titles.MyBanner1"),
