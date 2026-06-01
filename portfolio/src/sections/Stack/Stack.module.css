@@ -6,6 +6,7 @@
 .groupTitle {
   font-family: var(--font-mono);
   font-size: var(--step--1);
+  line-height: var(--leading-snug);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
   color: var(--accent);
@@ -51,6 +52,13 @@
   .groups {
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
+  }
+  /* Reserve 2 lines so single- and two-line titles share the same baseline,
+     keeping every underline aligned across columns. */
+  .groupTitle {
+    min-height: calc(2 * var(--leading-snug) * 1em);
+    display: flex;
+    align-items: flex-start;
   }
 }
 
