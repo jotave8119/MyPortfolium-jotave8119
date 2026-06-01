@@ -46,8 +46,9 @@ export function Nav() {
   }
 
   return (
-    <header className={[styles.header, scrolled && styles.scrolled].filter(Boolean).join(' ')}>
-      <nav className={styles.nav} aria-label="Primary">
+    <>
+      <header className={[styles.header, scrolled && styles.scrolled].filter(Boolean).join(' ')}>
+        <nav className={styles.nav} aria-label="Primary">
         <a
           href="#top"
           className={styles.brand}
@@ -96,7 +97,8 @@ export function Nav() {
             </span>
           </button>
         </div>
-      </nav>
+        </nav>
+      </header>
 
       <div
         id="mobile-menu"
@@ -121,6 +123,6 @@ export function Nav() {
           ))}
         </ul>
       </div>
-    </header>
+    </>
   )
 }

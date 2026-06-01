@@ -115,7 +115,9 @@
   position: fixed;
   inset: 0;
   top: 0;
-  z-index: 1;
+  /* Above page content (z-index 1) but below the header bar (z-index 100),
+     so the close (X) button stays clickable over the overlay. */
+  z-index: 50;
   background-color: var(--bg);
   display: grid;
   place-items: center;
