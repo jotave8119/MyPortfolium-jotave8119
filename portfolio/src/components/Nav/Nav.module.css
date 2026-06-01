@@ -67,6 +67,7 @@
   gap: 0.6rem;
 }
 
+/* ---- Animated hamburger (morphs to X) ---- */
 .burger {
   display: grid;
   place-items: center;
@@ -74,12 +75,42 @@
   height: 2.25rem;
   color: var(--fg);
 }
-.burger svg {
-  width: 1.4rem;
-  height: 1.4rem;
+.burgerBox {
+  position: relative;
+  width: 24px;
+  height: 16px;
+}
+.bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform var(--dur-fast) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out);
+}
+.bar:nth-child(1) {
+  top: 0;
+}
+.bar:nth-child(2) {
+  top: 7px;
+}
+.bar:nth-child(3) {
+  top: 14px;
+}
+.burgerOpen .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.burgerOpen .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0.4);
+}
+.burgerOpen .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ---- Mobile menu ---- */
+/* ---- Mobile menu overlay (curtain reveal + staggered links) ---- */
 .mobile {
   position: fixed;
   inset: 0;
@@ -89,12 +120,19 @@
   display: grid;
   place-items: center;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity var(--dur) var(--ease-out);
+  clip-path: inset(0 0 100% 0);
+  transition: opacity var(--dur) var(--ease-out),
+    clip-path var(--dur) var(--ease-out), visibility 0s linear var(--dur);
 }
 .mobileOpen {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  clip-path: inset(0 0 0 0);
+  transition: opacity var(--dur) var(--ease-out),
+    clip-path var(--dur) var(--ease-out), visibility 0s;
 }
 .mobile ul {
   list-style: none;
@@ -103,6 +141,30 @@
   flex-direction: column;
   gap: 1.5rem;
   text-align: center;
+}
+.mobile li {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+}
+.mobileOpen li {
+  opacity: 1;
+  transform: none;
+}
+.mobileOpen li:nth-child(1) {
+  transition-delay: 0.12s;
+}
+.mobileOpen li:nth-child(2) {
+  transition-delay: 0.18s;
+}
+.mobileOpen li:nth-child(3) {
+  transition-delay: 0.24s;
+}
+.mobileOpen li:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.mobileOpen li:nth-child(5) {
+  transition-delay: 0.36s;
 }
 .mobile a {
   display: inline-flex;

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FiMenu, FiX } from 'react-icons/fi'
 import { LanguageToggle } from '@/components/LanguageToggle/LanguageToggle'
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle'
 import { useScrollTo } from '@/hooks/useScrollTo'
@@ -84,13 +83,17 @@ export function Nav() {
           <ThemeToggle />
           <button
             type="button"
-            className={styles.burger}
+            className={[styles.burger, open && styles.burgerOpen].filter(Boolean).join(' ')}
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <FiX aria-hidden /> : <FiMenu aria-hidden />}
+            <span className={styles.burgerBox} aria-hidden="true">
+              <span className={styles.bar} />
+              <span className={styles.bar} />
+              <span className={styles.bar} />
+            </span>
           </button>
         </div>
       </nav>
@@ -98,7 +101,6 @@ export function Nav() {
       <div
         id="mobile-menu"
         className={[styles.mobile, open && styles.mobileOpen].filter(Boolean).join(' ')}
-        hidden={!open}
       >
         <ul role="list">
           {LINKS.map((link, i) => (

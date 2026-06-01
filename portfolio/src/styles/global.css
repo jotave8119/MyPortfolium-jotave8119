@@ -122,9 +122,9 @@ h4 {
   transform: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
+  /* Keep a gentle opacity fade, drop the vertical movement. */
+  .reveal,
+  .reveal.is-visible {
     transform: none;
-    transition: none;
   }
 }

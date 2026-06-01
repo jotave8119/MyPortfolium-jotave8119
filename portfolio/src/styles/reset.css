@@ -71,13 +71,17 @@ ol[role='list'] {
   isolation: isolate;
 }
 
+/* Under reduced motion we disable looping/auto animations (orb drift, scroll
+   bob, 3D distortion) and smooth scrolling, but keep short, user-triggered UI
+   transitions (menu, hover, theme, icon morph) — these are gentle and don't
+   cause vestibular discomfort. Large scroll-reveals are handled separately
+   (see `.reveal` in global.css). */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
 }
