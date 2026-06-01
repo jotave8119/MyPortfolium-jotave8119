@@ -1,4 +1,5 @@
 {
+  "seoTitle": "João Vitor Teixeira · Desenvolvedor Full Stack — React, Next.js, Node.js",
   "skipToContent": "Pular para o conteúdo",
   "nav": {
     "about": "Sobre",
@@ -11,7 +12,7 @@
     "greeting": "Olá, eu sou",
     "name": "João Vitor Teixeira",
     "role": "Desenvolvedor Full Stack",
-    "tagline": "Há mais de 2 anos construindo produtos digitais de ponta a ponta — React, Next.js, Node.js e integrações avançadas, com atenção a performance e detalhe.",
+    "tagline": "Há mais de 3 anos construindo produtos digitais de ponta a ponta — React, Next.js, Node.js e integrações avançadas, com atenção a performance e detalhe.",
     "ctaWork": "Ver projetos",
     "ctaContact": "Entrar em contato",
     "scroll": "role para explorar"
@@ -19,7 +20,7 @@
   "about": {
     "eyebrow": "Sobre mim",
     "title": "Construindo produtos do front à infra",
-    "bioLead": "Sou desenvolvedor Full Stack com mais de 2 anos de experiência, atuando em startups, consultorias e projetos freelance de alta complexidade.",
+    "bioLead": "Sou desenvolvedor Full Stack com mais de 3 anos de experiência, atuando em startups, consultorias e projetos freelance de alta complexidade.",
     "bioBody": "Já entreguei soluções completas de ponta a ponta — captive portals, tracking de pesquisa eleitoral em tempo real, formulários dinâmicos, QR Codes e automação de publicações no Instagram. Trabalho com React, Next.js, Angular e TypeScript no front, Node.js, NestJS e Bun no back, além de PostgreSQL, MongoDB e Docker. Tenho experiência com integrações avançadas (WhatsApp Business API, Twilio) e uso otimizado de LLMs com engenharia de prompt. Busco sempre código limpo, boas práticas e impacto real no negócio.",
     "facts": {
       "locationLabel": "Localização",
@@ -55,7 +56,7 @@
     "frontend": "Front-end",
     "backend": "Back-end & Infra",
     "integrations": "Integrações",
-    "tooling": "Práticas & Ferramentas"
+    "tooling": "Práticas"
   },
   "experience": {
     "eyebrow": "Experiência",

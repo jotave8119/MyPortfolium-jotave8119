@@ -1,4 +1,5 @@
 {
+  "seoTitle": "João Vitor Teixeira · Full Stack Developer — React, Next.js, Node.js",
   "skipToContent": "Skip to content",
   "nav": {
     "about": "About",
@@ -11,7 +12,7 @@
     "greeting": "Hi, I'm",
     "name": "João Vitor Teixeira",
     "role": "Full Stack Developer",
-    "tagline": "2+ years building digital products end to end — React, Next.js, Node.js and advanced integrations, with an eye for performance and detail.",
+    "tagline": "3+ years building digital products end to end — React, Next.js, Node.js and advanced integrations, with an eye for performance and detail.",
     "ctaWork": "View work",
     "ctaContact": "Get in touch",
     "scroll": "scroll to explore"
@@ -19,7 +20,7 @@
   "about": {
     "eyebrow": "About me",
     "title": "Building products from front to infra",
-    "bioLead": "I'm a Full Stack developer with 2+ years of experience across startups, consultancies and high-complexity freelance projects.",
+    "bioLead": "I'm a Full Stack developer with 3+ years of experience across startups, consultancies and high-complexity freelance projects.",
     "bioBody": "I've shipped complete end-to-end solutions — captive portals, real-time electoral survey tracking, dynamic forms, QR Codes and Instagram publishing automation. I work with React, Next.js, Angular and TypeScript on the front, Node.js, NestJS and Bun on the back, plus PostgreSQL, MongoDB and Docker. I have experience with advanced integrations (WhatsApp Business API, Twilio) and the optimized use of LLMs with prompt engineering. I always aim for clean code, good practices and real business impact.",
     "facts": {
       "locationLabel": "Location",
@@ -55,7 +56,7 @@
     "frontend": "Front-end",
     "backend": "Back-end & Infra",
     "integrations": "Integrations",
-    "tooling": "Practices & Tooling"
+    "tooling": "Practices"
   },
   "experience": {
     "eyebrow": "Experience",

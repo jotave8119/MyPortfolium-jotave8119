@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="orb" cx="78%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#ff8e72" stop-opacity="0.9"/>
+      <stop offset="42%" stop-color="#e2543b" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#c8442f" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0e0c0a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0e0c0a"/>
+  <circle cx="930" cy="270" r="360" fill="url(#orb)"/>
+
+  <!-- eyebrow -->
+  <text x="80" y="150" fill="#e2543b"
+        font-family="'JetBrains Mono','Courier New',monospace" font-size="22" letter-spacing="6">
+    PORTFÓLIO
+  </text>
+
+  <!-- name (display serif) -->
+  <text x="76" y="290" fill="#f3ece1"
+        font-family="'Instrument Serif',Georgia,'Times New Roman',serif" font-size="120">João Vitor</text>
+  <text x="76" y="410" fill="#f3ece1"
+        font-family="'Instrument Serif',Georgia,'Times New Roman',serif" font-size="120">Teixeira</text>
+
+  <!-- role / stack -->
+  <text x="80" y="500" fill="#cfc6ba"
+        font-family="'Geist',system-ui,Arial,sans-serif" font-size="34">
+    Desenvolvedor Full Stack
+  </text>
+  <text x="80" y="548" fill="#8a8178"
+        font-family="'JetBrains Mono','Courier New',monospace" font-size="24" letter-spacing="2">
+    React · Next.js · Node.js · TypeScript
+  </text>
+
+  <!-- url tag -->
+  <circle cx="92" cy="585" r="5" fill="#e2543b"/>
+  <text x="108" y="592" fill="#8a8178"
+        font-family="'JetBrains Mono','Courier New',monospace" font-size="22">
+    my-portfolium.vercel.app
+  </text>
+</svg>

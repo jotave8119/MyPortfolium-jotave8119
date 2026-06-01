@@ -21,6 +21,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  /* Keep the bar (and its close button) above the full-screen menu overlay. */
+  position: relative;
+  z-index: 2;
 }
 
 .brand {
@@ -81,6 +84,7 @@
   position: fixed;
   inset: 0;
   top: 0;
+  z-index: 1;
   background-color: var(--bg);
   display: grid;
   place-items: center;

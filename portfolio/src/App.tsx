@@ -14,10 +14,11 @@ import { Footer } from './sections/Footer/Footer'
 export function App() {
   const { i18n, t } = useTranslation()
 
-  // Keep <html lang> in sync with the active language (SEO + a11y).
+  // Keep <html lang> and document title in sync with the active language.
   useEffect(() => {
     document.documentElement.lang = i18n.resolvedLanguage === 'en' ? 'en' : 'pt-BR'
-  }, [i18n.resolvedLanguage])
+    document.title = t('seoTitle')
+  }, [i18n.resolvedLanguage, t])
 
   return (
     <SmoothScroll>
