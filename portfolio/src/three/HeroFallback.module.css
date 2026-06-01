@@ -1,0 +1,57 @@
+.fallback {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  width: min(70vh, 70vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    var(--accent-300),
+    var(--accent) 38%,
+    var(--accent-600) 62%,
+    transparent 72%
+  );
+  filter: blur(18px) saturate(115%);
+  opacity: 0.5;
+  animation: drift 16s var(--ease-in-out) infinite alternate;
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120% 90% at 60% 40%,
+    transparent 40%,
+    var(--bg) 88%
+  );
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-58%, -42%) scale(1.08);
+  }
+}
+
+@media (max-width: 979px) {
+  .orb {
+    left: 50%;
+    opacity: 0.32;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb {
+    animation: none;
+  }
+}

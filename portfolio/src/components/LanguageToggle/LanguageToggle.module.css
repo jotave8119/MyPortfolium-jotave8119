@@ -1,0 +1,25 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.05em;
+  color: var(--fg-subtle);
+  padding: 0.4rem 0.55rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.toggle:hover {
+  color: var(--fg);
+}
+
+.active {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.sep {
+  opacity: 0.4;
+}

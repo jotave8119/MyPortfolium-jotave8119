@@ -1,0 +1,125 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--z-nav);
+  transition: background-color var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out), backdrop-filter var(--dur) var(--ease-out);
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  background-color: color-mix(in oklab, var(--bg) 72%, transparent);
+  backdrop-filter: blur(12px) saturate(140%);
+  border-bottom-color: var(--line);
+}
+
+.nav {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 0.9rem var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.brandDot {
+  color: var(--accent);
+}
+
+.links {
+  display: none;
+  align-items: center;
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.links a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45em;
+  font-size: var(--step-0);
+  color: var(--fg-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.links a:hover {
+  color: var(--fg);
+}
+
+.linkNum {
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.burger {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--fg);
+}
+.burger svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+/* ---- Mobile menu ---- */
+.mobile {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  background-color: var(--bg);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease-out);
+}
+.mobileOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.mobile a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6em;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 9vw, 3rem);
+  color: var(--fg);
+}
+.mobileNum {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .links {
+    display: flex;
+  }
+  .burger,
+  .mobile {
+    display: none;
+  }
+}

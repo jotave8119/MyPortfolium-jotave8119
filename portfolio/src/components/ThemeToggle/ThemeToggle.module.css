@@ -1,0 +1,23 @@
+.toggle {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  color: var(--fg-muted);
+  border: 1px solid var(--line);
+  transition: color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.toggle:hover {
+  color: var(--fg);
+  border-color: var(--line-strong);
+  transform: rotate(15deg);
+}
+
+.toggle svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}

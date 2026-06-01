@@ -1,0 +1,72 @@
+/* All three layers are hidden until the effect activates (desktop, fine
+   pointer, motion allowed) by adding `has-custom-cursor` to <body>. */
+
+.glow,
+.ring,
+.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+:global(body.has-custom-cursor) .glow,
+:global(body.has-custom-cursor) .ring,
+:global(body.has-custom-cursor) .dot {
+  opacity: 1;
+}
+
+:global(body.cursor-hidden) .glow,
+:global(body.cursor-hidden) .ring,
+:global(body.cursor-hidden) .dot {
+  opacity: 0;
+}
+
+/* Soft glow that follows the cursor and lifts the background in empty areas. */
+.glow {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: radial-gradient(
+    560px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in oklab, var(--accent) 20%, transparent),
+    color-mix(in oklab, var(--accent) 6%, transparent) 35%,
+    transparent 62%
+  );
+  transition: opacity var(--dur) var(--ease-out);
+}
+
+.ring {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  z-index: 9999;
+  will-change: transform;
+  transition: width var(--dur-fast) var(--ease-out),
+    height var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out), opacity var(--dur) var(--ease-out);
+}
+
+.ring.hover {
+  width: 60px;
+  height: 60px;
+  background-color: color-mix(in oklab, var(--accent) 14%, transparent);
+}
+
+.ring.down {
+  width: 30px;
+  height: 30px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  z-index: 10000;
+  will-change: transform;
+  transition: opacity var(--dur) var(--ease-out);
+}

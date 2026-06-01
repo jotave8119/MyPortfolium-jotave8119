@@ -1,0 +1,48 @@
+.heading {
+  max-width: var(--measure);
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--accent);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-subtle);
+  position: relative;
+  padding-left: 3.5rem;
+}
+.eyebrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2.5rem;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.title {
+  font-size: var(--step-4);
+  max-width: 14ch;
+}
+
+.intro {
+  margin-top: 1.25rem;
+  color: var(--fg-muted);
+  font-size: var(--step-1);
+  max-width: 52ch;
+}

@@ -1,0 +1,105 @@
+/* ============================================================
+   DESIGN TOKENS — editorial / cinematic portfolio
+   Two layers: primitives (raw) -> semantics (role-based, themeable).
+   Components must consume ONLY semantic tokens.
+   ============================================================ */
+
+:root {
+  /* ---- PRIMITIVES: warm-dark neutrals ---- */
+  --warm-950: #0e0c0a;
+  --warm-900: #16130f;
+  --warm-850: #1b1714;
+  --warm-800: #211c16;
+  --warm-700: #2c2620;
+  --warm-300: #cfc6ba;
+  --warm-200: #e7ddd0;
+  --warm-100: #f3ece1;
+  --warm-50: #faf6ef;
+
+  /* ---- PRIMITIVES: brand accent (warm red) ---- */
+  --accent-600: #c8442f;
+  --accent-500: #e2543b;
+  --accent-400: #ef6a52;
+  --accent-300: #ff8e72;
+
+  /* ---- TYPOGRAPHY ---- */
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Fluid type scale (clamp: min, preferred, max) */
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.92rem);
+  --step-0: clamp(1rem, 0.95rem + 0.3vw, 1.13rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.3rem + 1vw, 2.1rem);
+  --step-3: clamp(2rem, 1.6rem + 2vw, 3.2rem);
+  --step-4: clamp(2.8rem, 2rem + 4vw, 5rem);
+  --step-5: clamp(3.4rem, 2.2rem + 6.5vw, 8.5rem);
+
+  --leading-tight: 1.04;
+  --leading-snug: 1.2;
+  --leading-body: 1.62;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.18em;
+
+  /* ---- SPACING (fluid) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 7rem;
+  --section-y: clamp(4.5rem, 10vh, 9rem);
+  --gutter: clamp(1.25rem, 5vw, 6rem);
+  --measure: 66ch;
+
+  /* ---- LAYOUT / MISC ---- */
+  --maxw: 1320px;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.25s;
+  --dur: 0.55s;
+  --dur-slow: 0.9s;
+  --z-nav: 100;
+  --z-overlay: 200;
+}
+
+/* ---- SEMANTIC TOKENS — dark (default) ---- */
+:root,
+[data-theme='dark'] {
+  --bg: var(--warm-950);
+  --bg-2: var(--warm-900);
+  --surface: var(--warm-850);
+  --surface-2: var(--warm-800);
+  --fg: var(--warm-100);
+  --fg-muted: var(--warm-300);
+  --fg-subtle: color-mix(in oklab, var(--warm-300) 60%, transparent);
+  --accent: var(--accent-500);
+  --accent-hover: var(--accent-400);
+  --accent-contrast: var(--warm-950);
+  --line: color-mix(in oklab, var(--fg) 12%, transparent);
+  --line-strong: color-mix(in oklab, var(--fg) 22%, transparent);
+  --selection: color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+/* ---- SEMANTIC TOKENS — light ---- */
+[data-theme='light'] {
+  --bg: var(--warm-50);
+  --bg-2: #fffdf9;
+  --surface: #ffffff;
+  --surface-2: var(--warm-100);
+  --fg: var(--warm-950);
+  --fg-muted: var(--warm-800);
+  --fg-subtle: color-mix(in oklab, var(--warm-800) 55%, transparent);
+  --accent: var(--accent-600);
+  --accent-hover: var(--accent-500);
+  --accent-contrast: var(--warm-50);
+  --line: color-mix(in oklab, var(--warm-950) 12%, transparent);
+  --line-strong: color-mix(in oklab, var(--warm-950) 22%, transparent);
+  --selection: color-mix(in oklab, var(--accent) 25%, transparent);
+}

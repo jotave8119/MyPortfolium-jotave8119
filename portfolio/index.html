@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e0c0a" />
+    <meta name="color-scheme" content="dark light" />
+
+    <title>João Vitor Teixeira · Desenvolvedor Full Stack — React, Next.js, Node.js</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Full Stack com +2 anos construindo produtos digitais de ponta a ponta — React, Next.js, Angular, Node.js, NestJS, Bun e integrações avançadas. Veja meus projetos e entre em contato."
+    />
+    <meta name="author" content="João Vitor Teixeira da Silva" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://my-portfolium.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://my-portfolium.vercel.app/" />
+    <meta property="og:site_name" content="João Vitor Teixeira" />
+    <meta property="og:title" content="João Vitor Teixeira · Desenvolvedor Full Stack" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor Full Stack (React, Next.js, Node.js). +2 anos construindo produtos digitais de ponta a ponta."
+    />
+    <meta property="og:image" content="https://my-portfolium.vercel.app/og/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="João Vitor Teixeira · Desenvolvedor Full Stack" />
+    <meta
+      name="twitter:description"
+      content="Desenvolvedor Full Stack (React, Next.js, Node.js). +2 anos construindo produtos digitais de ponta a ponta."
+    />
+    <meta name="twitter:image" content="https://my-portfolium.vercel.app/og/og-image.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts: editorial pairing (serif display + sans body + mono details) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Set theme before paint to avoid flash -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        try {
+          var l = localStorage.getItem('lang');
+          if (l) document.documentElement.setAttribute('lang', l === 'en' ? 'en' : 'pt-BR');
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "João Vitor Teixeira da Silva",
+        "alternateName": "João Teixeira",
+        "jobTitle": "Desenvolvedor Full Stack",
+        "url": "https://my-portfolium.vercel.app/",
+        "email": "mailto:teixeirajoaovitor0@gmail.com",
+        "telephone": "+5521969276579",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nova Iguaçu",
+          "addressRegion": "RJ",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/joaoteixeira13/",
+          "https://github.com/jotave8119"
+        ],
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "Angular",
+          "TypeScript",
+          "Node.js",
+          "NestJS",
+          "Bun",
+          "PostgreSQL",
+          "MongoDB",
+          "Docker",
+          "React Native",
+          "WhatsApp Business API"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

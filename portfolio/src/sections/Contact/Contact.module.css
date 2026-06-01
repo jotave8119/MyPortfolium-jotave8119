@@ -1,0 +1,179 @@
+.grid {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+/* ---- Form ---- */
+.form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+.field label {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-subtle);
+}
+.field input,
+.field textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  color: var(--fg);
+  font-size: var(--step-0);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+  resize: vertical;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--fg-subtle);
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
+.field input[aria-invalid='true'],
+.field textarea[aria-invalid='true'] {
+  border-color: var(--accent);
+}
+
+.error {
+  font-size: var(--step--1);
+  color: var(--accent-300);
+}
+
+.submit {
+  justify-self: start;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: 0.95rem 1.8rem;
+  border-radius: var(--radius);
+  transition: background-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+.submit:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+.submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.status {
+  min-height: 1.25rem;
+  font-size: var(--step-0);
+}
+.ok {
+  color: var(--fg);
+}
+.fail {
+  color: var(--accent-300);
+}
+
+/* ---- Aside: socials + cv ---- */
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.orReach {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-subtle);
+}
+
+.socials {
+  display: grid;
+  gap: 0.75rem;
+}
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+.socials a:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+.socialIcon {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.socialLabel {
+  display: grid;
+  gap: 0.1rem;
+}
+.handle {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--fg-subtle);
+}
+.socialArrow {
+  margin-left: auto;
+  color: var(--fg-subtle);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.socials a:hover .socialArrow {
+  color: var(--accent);
+}
+
+.cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--fg);
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 0.4rem;
+  width: fit-content;
+  transition: color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+.cv:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+  }
+}

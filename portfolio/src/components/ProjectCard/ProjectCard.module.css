@@ -1,0 +1,99 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--dur-slow) var(--ease-out),
+    filter var(--dur) var(--ease-out);
+  filter: saturate(0.92);
+}
+
+.media:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.05);
+}
+
+.cta {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--bg) 75%, transparent);
+  backdrop-filter: blur(6px);
+  color: var(--fg);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+.media:hover .cta,
+.media:focus-visible .cta {
+  opacity: 1;
+  transform: none;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  font-size: var(--step-2);
+}
+
+.year {
+  color: var(--fg-subtle);
+}
+
+.desc {
+  color: var(--fg-muted);
+  max-width: 48ch;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.stack li {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  padding: 0.3rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+/* Reveal CTA on touch devices where hover isn't available. */
+@media (hover: none) {
+  .cta {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,142 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: clip;
+  padding-block: 6rem 4rem;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.greeting {
+  font-family: var(--font-mono);
+  font-size: var(--step-0);
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: var(--step-5);
+  line-height: 0.95;
+  letter-spacing: var(--tracking-tight);
+  display: flex;
+  flex-direction: column;
+}
+.name span {
+  display: block;
+}
+
+.role {
+  font-size: var(--step-2);
+  color: var(--fg-muted);
+  margin-top: 1rem;
+}
+.roleMark {
+  color: var(--accent);
+}
+
+.tagline {
+  margin-top: 1.75rem;
+  max-width: 46ch;
+  font-size: var(--step-1);
+  color: var(--fg-muted);
+  line-height: var(--leading-body);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.primary,
+.ghost {
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.6rem;
+  border-radius: var(--radius);
+  transition: transform var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.primary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+.primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+.ghost {
+  border: 1px solid var(--line-strong);
+  color: var(--fg);
+}
+.ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.scrollCue {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 1.75rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--fg-subtle);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.scrollCue:hover {
+  color: var(--fg);
+}
+.scrollCue svg {
+  animation: bob 1.8s var(--ease-in-out) infinite;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* On wide screens, bias the 3D backdrop to the right of the text. */
+@media (min-width: 980px) {
+  .bg {
+    left: auto;
+    right: 0;
+    width: 58%;
+  }
+  .tagline {
+    max-width: 40ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollCue svg {
+    animation: none;
+  }
+}

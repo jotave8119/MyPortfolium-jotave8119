@@ -1,0 +1,138 @@
+{
+  "skipToContent": "Skip to content",
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "stack": "Stack",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "João Vitor Teixeira",
+    "role": "Full Stack Developer",
+    "tagline": "2+ years building digital products end to end — React, Next.js, Node.js and advanced integrations, with an eye for performance and detail.",
+    "ctaWork": "View work",
+    "ctaContact": "Get in touch",
+    "scroll": "scroll to explore"
+  },
+  "about": {
+    "eyebrow": "About me",
+    "title": "Building products from front to infra",
+    "bioLead": "I'm a Full Stack developer with 2+ years of experience across startups, consultancies and high-complexity freelance projects.",
+    "bioBody": "I've shipped complete end-to-end solutions — captive portals, real-time electoral survey tracking, dynamic forms, QR Codes and Instagram publishing automation. I work with React, Next.js, Angular and TypeScript on the front, Node.js, NestJS and Bun on the back, plus PostgreSQL, MongoDB and Docker. I have experience with advanced integrations (WhatsApp Business API, Twilio) and the optimized use of LLMs with prompt engineering. I always aim for clean code, good practices and real business impact.",
+    "facts": {
+      "locationLabel": "Location",
+      "locationValue": "Nova Iguaçu, RJ — Brazil",
+      "roleLabel": "Role",
+      "roleValue": "Full Stack Developer",
+      "focusLabel": "Focus",
+      "focusValue": "React · Next.js · Node.js · TypeScript",
+      "educationLabel": "Education",
+      "educationValue": "Systems Analysis & Development — UNOPAR (2025)"
+    }
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "A few things I've built",
+    "intro": "A selection of projects. Click to see them live or check the code.",
+    "viewProject": "View project",
+    "viewCode": "Code",
+    "year": "Year",
+    "projects": {
+      "devducks": "A Q&A platform for the dev community, with authentication and a feed of questions.",
+      "devhelp": "Team project connecting developers to exchange help and knowledge.",
+      "kenziehub": "Personal dashboard where users register and manage their technologies and skill levels.",
+      "burger": "Online burger shop with product listing, search and a shopping cart.",
+      "nukenzie": "Personal finance app to track income and expenses.",
+      "weather": "Weather forecast app consuming an external API via geolocation and city search."
+    }
+  },
+  "stack": {
+    "eyebrow": "Technologies",
+    "title": "Tools I work with",
+    "intro": "The main technologies and practices in my day to day.",
+    "frontend": "Front-end",
+    "backend": "Back-end & Infra",
+    "integrations": "Integrations",
+    "tooling": "Practices & Tooling"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I've worked",
+    "jobs": {
+      "datehome": {
+        "period": "07/2023 — Present",
+        "role": "Full Stack Developer",
+        "company": "Date a Home Brasil · Remote",
+        "desc": "Dynamic link pages, customizable forms, QR Codes and an Instagram publishing automation POC for the luxury real-estate market. Angular, NestJS, PostgreSQL and LLM integration."
+      },
+      "grquest": {
+        "period": "Present · Freelance",
+        "role": "Full Stack Developer",
+        "company": "GR Quest · Remote",
+        "desc": "End-to-end tracking solution for real-time electoral surveys, conducted via WhatsApp Business API + Twilio. Bun, Next.js, Docker and Railway, with queues and fallback."
+      },
+      "a7": {
+        "period": "Present · Freelance",
+        "role": "Full Stack Developer",
+        "company": "A7 Insurance Brokerage · Remote",
+        "desc": "Complete captive portal for Wi-Fi authentication with an admin panel and network security (Sophos). Bun + Hono, Next.js, Prisma + PostgreSQL and Docker."
+      },
+      "onda": {
+        "period": "11/2024 — 05/2025",
+        "role": "Front End Web & Mobile",
+        "company": "Onda Finance · Remote",
+        "desc": "Web and mobile apps with React, TypeScript and React Native/Expo. Reusable component library and LLM integration in real user flows."
+      },
+      "devoler": {
+        "period": "01/2024 — 01/2025",
+        "role": "Front End Developer",
+        "company": "Devoler Consultancy · Remote",
+        "desc": "Consultancy projects focused on Angular, legacy module refactoring and design patterns, with agile methodologies and Code Review."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk",
+    "intro": "Open to opportunities and new projects. Send a message and I'll get back to you.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me a bit about what you need…",
+      "send": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent! Thank you, I'll reply soon.",
+      "error": "Something went wrong. Try again or reach me directly by email.",
+      "invalidName": "Please enter your name.",
+      "invalidEmail": "Please enter a valid email.",
+      "invalidMessage": "Please write a slightly longer message."
+    },
+    "orReach": "Or find me on",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  },
+  "cv": {
+    "label": "Resume",
+    "download": "Download resume (PDF)"
+  },
+  "footer": {
+    "backToTop": "Back to top",
+    "builtWith": "Built with React, TypeScript and Three.js",
+    "rights": "All rights reserved."
+  },
+  "theme": {
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "lang": {
+    "switchToEn": "Switch to English",
+    "switchToPt": "Mudar para Português"
+  }
+}

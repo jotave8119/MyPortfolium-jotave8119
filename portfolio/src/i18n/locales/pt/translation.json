@@ -1,0 +1,138 @@
+{
+  "skipToContent": "Pular para o conteúdo",
+  "nav": {
+    "about": "Sobre",
+    "work": "Projetos",
+    "stack": "Stack",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "João Vitor Teixeira",
+    "role": "Desenvolvedor Full Stack",
+    "tagline": "Há mais de 2 anos construindo produtos digitais de ponta a ponta — React, Next.js, Node.js e integrações avançadas, com atenção a performance e detalhe.",
+    "ctaWork": "Ver projetos",
+    "ctaContact": "Entrar em contato",
+    "scroll": "role para explorar"
+  },
+  "about": {
+    "eyebrow": "Sobre mim",
+    "title": "Construindo produtos do front à infra",
+    "bioLead": "Sou desenvolvedor Full Stack com mais de 2 anos de experiência, atuando em startups, consultorias e projetos freelance de alta complexidade.",
+    "bioBody": "Já entreguei soluções completas de ponta a ponta — captive portals, tracking de pesquisa eleitoral em tempo real, formulários dinâmicos, QR Codes e automação de publicações no Instagram. Trabalho com React, Next.js, Angular e TypeScript no front, Node.js, NestJS e Bun no back, além de PostgreSQL, MongoDB e Docker. Tenho experiência com integrações avançadas (WhatsApp Business API, Twilio) e uso otimizado de LLMs com engenharia de prompt. Busco sempre código limpo, boas práticas e impacto real no negócio.",
+    "facts": {
+      "locationLabel": "Localização",
+      "locationValue": "Nova Iguaçu, RJ — Brasil",
+      "roleLabel": "Função",
+      "roleValue": "Desenvolvedor Full Stack",
+      "focusLabel": "Foco",
+      "focusValue": "React · Next.js · Node.js · TypeScript",
+      "educationLabel": "Formação",
+      "educationValue": "Análise e Desenv. de Sistemas — UNOPAR (2025)"
+    }
+  },
+  "work": {
+    "eyebrow": "Projetos selecionados",
+    "title": "Algumas coisas que construí",
+    "intro": "Uma seleção de projetos. Clique para ver ao vivo ou conferir o código.",
+    "viewProject": "Ver projeto",
+    "viewCode": "Código",
+    "year": "Ano",
+    "projects": {
+      "devducks": "Plataforma de perguntas e respostas para a comunidade dev, com autenticação e feed de dúvidas.",
+      "devhelp": "Projeto em equipe que conecta pessoas desenvolvedoras para troca de ajuda e conhecimento.",
+      "kenziehub": "Dashboard pessoal onde a pessoa cadastra e gerencia suas tecnologias e níveis de habilidade.",
+      "burger": "Hamburgueria online com listagem de produtos, busca e carrinho de compras.",
+      "nukenzie": "Aplicação de controle financeiro pessoal para registrar entradas e saídas.",
+      "weather": "App de previsão do tempo consumindo API externa por geolocalização e busca de cidade."
+    }
+  },
+  "stack": {
+    "eyebrow": "Tecnologias",
+    "title": "Ferramentas com que trabalho",
+    "intro": "As principais tecnologias e práticas do meu dia a dia.",
+    "frontend": "Front-end",
+    "backend": "Back-end & Infra",
+    "integrations": "Integrações",
+    "tooling": "Práticas & Ferramentas"
+  },
+  "experience": {
+    "eyebrow": "Experiência",
+    "title": "Onde já trabalhei",
+    "jobs": {
+      "datehome": {
+        "period": "07/2023 — Atual",
+        "role": "Desenvolvedor Full Stack",
+        "company": "Date a Home Brasil · Remoto",
+        "desc": "Páginas de links dinâmicas, formulários customizáveis, QR Codes e POC de automação de publicações no Instagram para o mercado imobiliário de luxo. Angular, NestJS, PostgreSQL e integração com LLMs."
+      },
+      "grquest": {
+        "period": "Atual · Freelance",
+        "role": "Desenvolvedor Full Stack",
+        "company": "GR Quest · Remoto",
+        "desc": "Solução completa de tracking para pesquisa eleitoral em tempo real, com pesquisas via WhatsApp Business API + Twilio. Bun, Next.js, Docker e Railway, com filas e fallback."
+      },
+      "a7": {
+        "period": "Atual · Freelance",
+        "role": "Desenvolvedor Full Stack",
+        "company": "A7 Corretora de Seguros · Remoto",
+        "desc": "Captive portal completo para autenticação Wi-Fi com painel administrativo e segurança de rede (Sophos). Bun + Hono, Next.js, Prisma + PostgreSQL e Docker."
+      },
+      "onda": {
+        "period": "11/2024 — 05/2025",
+        "role": "Front End Web & Mobile",
+        "company": "Onda Finance · Remoto",
+        "desc": "Apps web e mobile com React, TypeScript e React Native/Expo. Biblioteca de componentes reutilizáveis e integração de LLMs em fluxos reais de usuário."
+      },
+      "devoler": {
+        "period": "01/2024 — 01/2025",
+        "role": "Desenvolvedor Front End",
+        "company": "Devoler Consultoria · Remoto",
+        "desc": "Projetos de consultoria com foco em Angular, refatoração de módulos legados e padrões de projeto, com metodologias ágeis e Code Review."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Vamos conversar",
+    "intro": "Aberto a oportunidades e a novos projetos. Mande uma mensagem que eu respondo.",
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "email": "E-mail",
+      "emailPlaceholder": "voce@exemplo.com",
+      "message": "Mensagem",
+      "messagePlaceholder": "Conte um pouco sobre o que você precisa…",
+      "send": "Enviar mensagem",
+      "sending": "Enviando…",
+      "success": "Mensagem enviada! Obrigado, retorno em breve.",
+      "error": "Algo deu errado. Tente novamente ou me chame direto pelo e-mail.",
+      "invalidName": "Informe seu nome.",
+      "invalidEmail": "Informe um e-mail válido.",
+      "invalidMessage": "Escreva uma mensagem um pouco maior."
+    },
+    "orReach": "Ou me encontre em",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail"
+  },
+  "cv": {
+    "label": "Currículo",
+    "download": "Baixar currículo (PDF)"
+  },
+  "footer": {
+    "backToTop": "Voltar ao topo",
+    "builtWith": "Feito com React, TypeScript e Three.js",
+    "rights": "Todos os direitos reservados."
+  },
+  "theme": {
+    "toLight": "Mudar para tema claro",
+    "toDark": "Mudar para tema escuro"
+  },
+  "lang": {
+    "switchToEn": "Switch to English",
+    "switchToPt": "Mudar para Português"
+  }
+}
