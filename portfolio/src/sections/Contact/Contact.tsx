@@ -150,25 +150,27 @@ export function Contact() {
           </Reveal>
 
           <Reveal className={styles.aside} delay={0.1}>
-            <p className={styles.orReach}>{t('contact.orReach')}</p>
-            <ul className={styles.socials} role="list">
-              {socials.map(({ id, labelKey, href, handle, icon: Icon }) => (
-                <li key={id}>
-                  <a
-                    href={href}
-                    target={id === 'email' ? undefined : '_blank'}
-                    rel="noreferrer noopener"
-                  >
-                    <Icon aria-hidden className={styles.socialIcon} />
-                    <span className={styles.socialLabel}>
-                      <span>{t(labelKey)}</span>
-                      <span className={styles.handle}>{handle}</span>
-                    </span>
-                    <FiArrowUpRight aria-hidden className={styles.socialArrow} />
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <address className={styles.contactInfo}>
+              <p className={styles.orReach}>{t('contact.orReach')}</p>
+              <ul className={styles.socials} role="list">
+                {socials.map(({ id, labelKey, href, handle, icon: Icon }) => (
+                  <li key={id}>
+                    <a
+                      href={href}
+                      target={id === 'email' ? undefined : '_blank'}
+                      rel="noreferrer noopener"
+                    >
+                      <Icon aria-hidden className={styles.socialIcon} />
+                      <span className={styles.socialLabel}>
+                        <span>{t(labelKey)}</span>
+                        <span className={styles.handle}>{handle}</span>
+                      </span>
+                      <FiArrowUpRight aria-hidden className={styles.socialArrow} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </address>
 
             <a className={styles.cv} href="/cv/joao-vitor-teixeira-cv.pdf" download>
               <FiDownload aria-hidden />

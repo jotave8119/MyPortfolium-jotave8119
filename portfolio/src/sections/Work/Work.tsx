@@ -44,9 +44,7 @@ export function Work() {
 
         <div className={styles.grid} ref={gridRef}>
           {projects.map((project) => (
-            <div data-card key={project.id}>
-              <ProjectCard project={project} />
-            </div>
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>

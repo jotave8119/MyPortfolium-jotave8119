@@ -19,7 +19,7 @@ const NavBar = () => {
   return (
     <div className="Navbar">
       <div className="photoBox">
-        <img className="photo" title="João" src={jvphoto} alt="João" />
+        <img className="photo" loading="lazy" title="João" src={jvphoto} alt="João" />
         <h2 className="name">João</h2>
       </div>
       <div className={`nav-items ${isOpen && "open"}`}>

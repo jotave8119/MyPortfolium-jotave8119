@@ -100,8 +100,9 @@ export function Nav() {
         </nav>
       </header>
 
-      <div
+      <nav
         id="mobile-menu"
+        aria-label={t('nav.menu')}
         className={[styles.mobile, open && styles.mobileOpen].filter(Boolean).join(' ')}
       >
         <ul role="list">
@@ -122,7 +123,7 @@ export function Nav() {
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
     </>
   )
 }

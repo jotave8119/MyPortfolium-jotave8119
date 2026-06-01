@@ -24,10 +24,17 @@ export function Footer() {
             João Vitor Teixeira
           </a>
 
-          <button type="button" className={styles.toTop} onClick={() => scrollTo('#top')}>
+          <a
+            href="#top"
+            className={styles.toTop}
+            onClick={(e) => {
+              e.preventDefault()
+              scrollTo('#top')
+            }}
+          >
             {t('footer.backToTop')}
             <FiArrowUp aria-hidden />
-          </button>
+          </a>
         </div>
 
         <div className={styles.bottom}>

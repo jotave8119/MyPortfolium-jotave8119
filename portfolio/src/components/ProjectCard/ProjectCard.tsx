@@ -7,7 +7,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const { t } = useTranslation()
 
   return (
-    <article className={styles.card}>
+    <article className={styles.card} data-card>
       <a
         className={styles.media}
         href={project.href}
@@ -30,7 +30,9 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className={styles.body}>
         <div className={styles.head}>
           <h3 className={styles.title}>{project.title}</h3>
-          <span className={`mono ${styles.year}`}>{project.year}</span>
+          <time className={`mono ${styles.year}`} dateTime={String(project.year)}>
+            {project.year}
+          </time>
         </div>
         <p className={styles.desc}>{t(project.descKey)}</p>
         <ul className={styles.stack} role="list">

@@ -6,7 +6,8 @@
     "work": "Work",
     "stack": "Stack",
     "experience": "Experience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Navigation menu"
   },
   "hero": {
     "greeting": "Hi, I'm",

@@ -33,7 +33,7 @@ export function Hero() {
   }, [reducedMotion])
 
   return (
-    <section id="top" className={styles.hero} ref={rootRef}>
+    <section id="top" className={styles.hero} ref={rootRef} aria-labelledby="hero-title">
       <div className={styles.bg} aria-hidden="true">
         {should3D ? (
           <Suspense fallback={<HeroFallback />}>
@@ -48,7 +48,7 @@ export function Hero() {
         <p className={styles.greeting} data-hero-anim>
           {t('hero.greeting')}
         </p>
-        <h1 className={styles.name}>
+        <h1 id="hero-title" className={styles.name}>
           <span data-hero-anim>João Vitor</span>
           <span data-hero-anim>Teixeira</span>
         </h1>
@@ -59,24 +59,40 @@ export function Hero() {
           {t('hero.tagline')}
         </p>
         <div className={styles.ctas} data-hero-anim>
-          <button type="button" className={styles.primary} onClick={() => scrollTo('#work')}>
+          <a
+            href="#work"
+            className={styles.primary}
+            onClick={(e) => {
+              e.preventDefault()
+              scrollTo('#work')
+            }}
+          >
             {t('hero.ctaWork')}
-          </button>
-          <button type="button" className={styles.ghost} onClick={() => scrollTo('#contact')}>
+          </a>
+          <a
+            href="#contact"
+            className={styles.ghost}
+            onClick={(e) => {
+              e.preventDefault()
+              scrollTo('#contact')
+            }}
+          >
             {t('hero.ctaContact')}
-          </button>
+          </a>
         </div>
       </div>
 
-      <button
-        type="button"
+      <a
+        href="#about"
         className={styles.scrollCue}
-        onClick={() => scrollTo('#about')}
-        aria-label={t('hero.scroll')}
+        onClick={(e) => {
+          e.preventDefault()
+          scrollTo('#about')
+        }}
       >
         <span className="mono">{t('hero.scroll')}</span>
         <FiArrowDown aria-hidden />
-      </button>
+      </a>
     </section>
   )
 }
