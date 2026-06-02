@@ -42,7 +42,11 @@ export function Nav() {
 
   const go = (target: string) => {
     setOpen(false)
-    scrollTo(target)
+    // Release the scroll lock synchronously — on mobile, body `overflow: hidden`
+    // actually blocks scrolling, so we must unlock before scrolling. Defer the
+    // scroll one frame so the unlock is applied first.
+    document.body.style.overflow = ''
+    requestAnimationFrame(() => scrollTo(target))
   }
 
   return (
