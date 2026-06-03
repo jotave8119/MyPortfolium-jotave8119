@@ -28,8 +28,9 @@ export function OpenSource() {
         ].filter(Boolean)
       : []
 
+  const glData = gl.status === 'ok' ? gl.data : null
   const showGitlab =
-    gl.status === 'ok' && gl.data?.configured && (gl.data.projects?.length ?? 0) > 0
+    !!glData?.configured && (!!glData.contributions || (glData.projects?.length ?? 0) > 0)
 
   return (
     <section id="opensource" className={`section ${styles.section}`} aria-labelledby="opensource-title">
@@ -94,15 +95,29 @@ export function OpenSource() {
           </div>
         )}
 
-        {showGitlab && gl.data && (
-          <Reveal delay={0.1} className={styles.gitlab}>
-            <h3 className={styles.subhead}>{t('activity.gitlabProjects')}</h3>
-            <div className={styles.grid}>
-              {gl.data.projects.map((repo) => (
-                <RepoCard key={repo.url} repo={repo} />
-              ))}
-            </div>
-          </Reveal>
+        {showGitlab && glData && (
+          <div className={styles.gitlab}>
+            {glData.contributions && (
+              <Reveal delay={0.06}>
+                <h3 className={styles.subhead}>{t('activity.gitlabActivity')}</h3>
+                <ContributionHeatmap
+                  weeks={glData.contributions.weeks}
+                  legendLess={t('activity.less')}
+                  legendMore={t('activity.more')}
+                />
+              </Reveal>
+            )}
+            {glData.projects.length > 0 && (
+              <Reveal delay={0.1} className={styles.gitlabProjects}>
+                <h3 className={styles.subhead}>{t('activity.gitlabProjects')}</h3>
+                <div className={styles.grid}>
+                  {glData.projects.map((repo) => (
+                    <RepoCard key={repo.url} repo={repo} />
+                  ))}
+                </div>
+              </Reveal>
+            )}
+          </div>
         )}
       </div>
     </section>

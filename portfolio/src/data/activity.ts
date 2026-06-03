@@ -29,6 +29,7 @@ export interface GitHubData {
 export interface GitLabData {
   configured: boolean
   username?: string
+  contributions?: { total: number; weeks: ContributionDay[][] } | null
   projects: RepoSummary[]
   error?: string
 }
