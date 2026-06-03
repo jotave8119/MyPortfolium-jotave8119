@@ -6,6 +6,7 @@
     "work": "Projetos",
     "stack": "Stack",
     "experience": "Experiência",
+    "activity": "Código",
     "contact": "Contato",
     "menu": "Menu de navegação"
   },
@@ -94,6 +95,22 @@
         "desc": "Projetos de consultoria com foco em Angular, refatoração de módulos legados e padrões de projeto, com metodologias ágeis e Code Review."
       }
     }
+  },
+  "activity": {
+    "eyebrow": "Open source",
+    "title": "Atividade & código",
+    "intro": "Dados ao vivo do meu GitHub e GitLab.",
+    "contributions": "contribuições no último ano",
+    "followers": "Seguidores",
+    "repos": "Repositórios",
+    "stars": "Stars",
+    "topRepos": "Repositórios em destaque",
+    "gitlabProjects": "Projetos no GitLab",
+    "less": "Menos",
+    "more": "Mais",
+    "loading": "Carregando dados…",
+    "unavailable": "Dados ao vivo indisponíveis no momento.",
+    "viewProfile": "Ver perfil no GitHub"
   },
   "contact": {
     "eyebrow": "Contato",

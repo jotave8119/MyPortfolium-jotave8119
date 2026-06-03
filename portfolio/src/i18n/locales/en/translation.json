@@ -6,6 +6,7 @@
     "work": "Work",
     "stack": "Stack",
     "experience": "Experience",
+    "activity": "Code",
     "contact": "Contact",
     "menu": "Navigation menu"
   },
@@ -94,6 +95,22 @@
         "desc": "Consultancy projects focused on Angular, legacy module refactoring and design patterns, with agile methodologies and Code Review."
       }
     }
+  },
+  "activity": {
+    "eyebrow": "Open source",
+    "title": "Activity & code",
+    "intro": "Live data from my GitHub and GitLab.",
+    "contributions": "contributions in the last year",
+    "followers": "Followers",
+    "repos": "Repositories",
+    "stars": "Stars",
+    "topRepos": "Featured repositories",
+    "gitlabProjects": "GitLab projects",
+    "less": "Less",
+    "more": "More",
+    "loading": "Loading data…",
+    "unavailable": "Live data is unavailable right now.",
+    "viewProfile": "View GitHub profile"
   },
   "contact": {
     "eyebrow": "Contact",

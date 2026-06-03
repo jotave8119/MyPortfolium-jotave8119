@@ -10,6 +10,7 @@ const LINKS = [
   { id: 'work', target: '#work' },
   { id: 'stack', target: '#stack' },
   { id: 'experience', target: '#experience' },
+  { id: 'activity', target: '#opensource' },
   { id: 'contact', target: '#contact' },
 ] as const
 

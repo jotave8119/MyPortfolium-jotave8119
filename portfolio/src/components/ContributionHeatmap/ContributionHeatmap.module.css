@@ -1,0 +1,51 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scroll {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  /* thin scrollbar */
+  scrollbar-width: thin;
+}
+
+.cols {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: color-mix(in oklab, var(--fg) 8%, transparent);
+}
+.cell[data-level='1'] {
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
+}
+.cell[data-level='2'] {
+  background: color-mix(in oklab, var(--accent) 55%, transparent);
+}
+.cell[data-level='3'] {
+  background: color-mix(in oklab, var(--accent) 80%, transparent);
+}
+.cell[data-level='4'] {
+  background: var(--accent);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--fg-subtle);
+}

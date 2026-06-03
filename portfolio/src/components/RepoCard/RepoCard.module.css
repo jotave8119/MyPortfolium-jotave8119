@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.4rem;
+  height: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.name {
+  font-family: var(--font-mono);
+  font-size: var(--step-0);
+  color: var(--fg);
+  word-break: break-word;
+}
+.arrow {
+  color: var(--fg-subtle);
+  flex-shrink: 0;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.card:hover .arrow {
+  color: var(--accent);
+}
+
+.desc {
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  line-height: var(--leading-body);
+  flex: 1;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  color: var(--fg-subtle);
+}
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--fg-muted);
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+}

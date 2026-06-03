@@ -59,7 +59,7 @@ export function Contact() {
     <section id="contact" className={`section ${styles.contact}`} aria-labelledby="contact-title">
       <div className="container">
         <SectionHeading
-          index="05"
+          index="06"
           eyebrow={t('contact.eyebrow')}
           title={t('contact.title')}
           titleId="contact-title"

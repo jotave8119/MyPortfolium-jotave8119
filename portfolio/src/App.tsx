@@ -8,6 +8,7 @@ import { About } from './sections/About/About'
 import { Work } from './sections/Work/Work'
 import { Stack } from './sections/Stack/Stack'
 import { Experience } from './sections/Experience/Experience'
+import { OpenSource } from './sections/OpenSource/OpenSource'
 import { Contact } from './sections/Contact/Contact'
 import { Footer } from './sections/Footer/Footer'
 
@@ -33,6 +34,7 @@ export function App() {
         <Work />
         <Stack />
         <Experience />
+        <OpenSource />
         <Contact />
       </main>
       <Footer />
