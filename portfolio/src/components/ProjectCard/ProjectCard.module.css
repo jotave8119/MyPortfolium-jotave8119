@@ -21,12 +21,21 @@
   object-position: top center;
   transition: transform var(--dur-slow) var(--ease-out),
     filter var(--dur) var(--ease-out);
-  filter: saturate(0.92);
 }
 
 .media:hover img {
   transform: scale(1.04);
-  filter: saturate(1.05);
+}
+
+/* Desktop (hover-capable): grayscale by default, original color on hover.
+   Touch devices keep the image in full color. */
+@media (hover: hover) {
+  .media img {
+    filter: grayscale(1);
+  }
+  .media:hover img {
+    filter: grayscale(0);
+  }
 }
 
 .cta {
