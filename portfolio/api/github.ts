@@ -8,6 +8,7 @@
  * Returns profile stats, top repositories, language breakdown and the
  * contribution calendar (last year). Cached at the edge for an hour.
  */
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 const USER = process.env.GITHUB_USERNAME ?? 'jotave8119'
 const TOKEN = process.env.GITHUB_TOKEN
@@ -142,20 +143,12 @@ async function getContributions() {
   }
 }
 
-export default async function handler(): Promise<Response> {
+export default async function handler(_req: VercelRequest, res: VercelResponse) {
   try {
     const [base, contributions] = await Promise.all([getProfileAndRepos(), getContributions()])
-    return new Response(JSON.stringify({ ...base, contributions, username: USER }), {
-      status: 200,
-      headers: {
-        'content-type': 'application/json',
-        'cache-control': 'public, s-maxage=3600, stale-while-revalidate=86400',
-      },
-    })
+    res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
+    res.status(200).json({ ...base, contributions, username: USER })
   } catch {
-    return new Response(JSON.stringify({ error: 'github_failed' }), {
-      status: 502,
-      headers: { 'content-type': 'application/json' },
-    })
+    res.status(502).json({ error: 'github_failed' })
   }
 }

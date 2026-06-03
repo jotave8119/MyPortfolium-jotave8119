@@ -7,6 +7,7 @@
  *
  * Cached at the edge for an hour.
  */
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 const USER = process.env.GITLAB_USERNAME
 const TOKEN = process.env.GITLAB_TOKEN
@@ -31,12 +32,11 @@ interface GitlabProject {
   topics?: string[]
 }
 
-export default async function handler(): Promise<Response> {
+export default async function handler(_req: VercelRequest, res: VercelResponse) {
   if (!USER) {
-    return new Response(JSON.stringify({ configured: false }), {
-      status: 200,
-      headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=3600' },
-    })
+    res.setHeader('Cache-Control', 'public, s-maxage=3600')
+    res.status(200).json({ configured: false })
+    return
   }
 
   try {
@@ -64,17 +64,9 @@ export default async function handler(): Promise<Response> {
       topics: p.topics ?? [],
     }))
 
-    return new Response(JSON.stringify({ configured: true, username: USER, projects }), {
-      status: 200,
-      headers: {
-        'content-type': 'application/json',
-        'cache-control': 'public, s-maxage=3600, stale-while-revalidate=86400',
-      },
-    })
+    res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
+    res.status(200).json({ configured: true, username: USER, projects })
   } catch {
-    return new Response(JSON.stringify({ configured: true, error: 'gitlab_failed', projects: [] }), {
-      status: 200,
-      headers: { 'content-type': 'application/json' },
-    })
+    res.status(200).json({ configured: true, error: 'gitlab_failed', projects: [] })
   }
 }
