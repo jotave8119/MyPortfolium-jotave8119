@@ -25,24 +25,34 @@ interface RepoApi {
   pushed_at: string
 }
 
-const headers = (): Record<string, string> => {
-  const h: Record<string, string> = {
-    Accept: 'application/vnd.github+json',
-    'User-Agent': 'portfolio-app',
-  }
-  if (TOKEN) h.Authorization = `Bearer ${TOKEN}`
+const baseHeaders: Record<string, string> = {
+  Accept: 'application/vnd.github+json',
+  'User-Agent': 'portfolio-app',
+}
+
+const headers = (auth = true): Record<string, string> => {
+  const h = { ...baseHeaders }
+  if (auth && TOKEN) h.Authorization = `Bearer ${TOKEN.trim()}`
   return h
+}
+
+/** Fetch with the token; if the token is rejected, retry as public access. */
+async function ghFetch(url: string): Promise<Response> {
+  let res = await fetch(url, { headers: headers() })
+  if ((res.status === 401 || res.status === 403) && TOKEN) {
+    res = await fetch(url, { headers: headers(false) })
+  }
+  return res
 }
 
 async function getProfileAndRepos() {
   const [profileRes, reposRes] = await Promise.all([
-    fetch(`https://api.github.com/users/${USER}`, { headers: headers() }),
-    fetch(`https://api.github.com/users/${USER}/repos?per_page=100&type=owner&sort=pushed`, {
-      headers: headers(),
-    }),
+    ghFetch(`https://api.github.com/users/${USER}`),
+    ghFetch(`https://api.github.com/users/${USER}/repos?per_page=100&type=owner&sort=pushed`),
   ])
 
-  if (!profileRes.ok || !reposRes.ok) throw new Error('github_rest_failed')
+  if (!profileRes.ok) throw new Error(`profile_${profileRes.status}`)
+  if (!reposRes.ok) throw new Error(`repos_${reposRes.status}`)
 
   const profile = (await profileRes.json()) as {
     public_repos: number
@@ -148,7 +158,11 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
     const [base, contributions] = await Promise.all([getProfileAndRepos(), getContributions()])
     res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400')
     res.status(200).json({ ...base, contributions, username: USER })
-  } catch {
-    res.status(502).json({ error: 'github_failed' })
+  } catch (err) {
+    res.status(502).json({
+      error: 'github_failed',
+      detail: err instanceof Error ? err.message : String(err),
+      hasToken: Boolean(TOKEN),
+    })
   }
 }
